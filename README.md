@@ -4,8 +4,10 @@
 notes directly on disk, answers questions about them, captures voice and text, tracks
 tasks, projects and your day, and runs scheduled jobs (morning brief, mail triage,
 weekly review) that write back into the vault. Speech-to-text and the voice run on your
-Mac. Questions and job inputs go to Anthropic through the Claude Code CLI you sign in
-with; nothing else leaves the machine (see `PRIVACY.md` attached to each release).
+Mac. Questions, job inputs and the weekly self-audit (on by default, with a sample of your
+recent questions and answers; one switch turns it off) go to Anthropic through the Claude
+Code CLI you sign in with; nothing else leaves the machine (see `PRIVACY.md` attached to
+each release).
 
 ## Requirements
 
@@ -21,11 +23,14 @@ with; nothing else leaves the machine (see `PRIVACY.md` attached to each release
 1. Download the newest `VIKI_<version>_aarch64.dmg` from
    [Releases](https://github.com/tirnovar/viki-releases/releases/latest) and drag VIKI to
    Applications.
-2. First launch: right-click → Open (the app is not yet notarized; the release notes say
-   when that changes).
+2. First launch: the app is not yet notarized by Apple (the release notes say when that
+   changes), so macOS blocks it once. Open VIKI, click *Done* in the warning, then go to
+   **System Settings → Privacy & Security** and click **Open Anyway** next to VIKI
+   (macOS 15 and newer; right-click → Open no longer works there). On macOS 14,
+   right-click → Open works too. Expect the same step after each update.
 3. The five-step wizard asks for language and privacy consent, who you are, where the vault
-   is (or creates one), optional integrations (Microsoft 365, Telegram) and then checks
-   that `claude` and Node.js are ready.
+   is (or creates one), optional integrations (macOS calendar or Microsoft 365, Telegram)
+   and then checks that `claude` and Node.js are ready.
 
 The full guide, from a clean Mac to the first scheduled job, is `ONBOARDING.md` attached
 to every release. Updates: Settings → Info → *Check* compares your version with
