@@ -1,0 +1,44 @@
+name: Bug report
+description: Something in VIKI doesn't work as it should.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. Issues here are **public** – don't paste note contents,
+        names of clients or anything else you wouldn't post on the internet.
+  - type: input
+    id: version
+    attributes:
+      label: VIKI version
+      description: Settings → Info (for example 0.23.2, build dc9145a2).
+    validations:
+      required: true
+  - type: input
+    id: macos
+    attributes:
+      label: macOS version
+      placeholder: macOS 26.1
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did, what you expected and what VIKI did instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open …
+        2. Click …
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Diagnostics
+      description: |
+        Settings → Info → *Export diagnostics* creates a zip (version, build, config
+        without secrets, redacted log). Look inside before attaching it – the issue is public.
