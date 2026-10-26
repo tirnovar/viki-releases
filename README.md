@@ -39,8 +39,9 @@ to every release. Updates: Settings → Info → *Check* compares your version w
 ## Support
 
 Settings → Info → *Export diagnostics* produces a zip (version, build, config without
-secrets, redacted log) to attach to a post in
-[Discussions](https://github.com/tirnovar/viki-releases/discussions).
+secrets, redacted log) to attach to an
+[issue](https://github.com/tirnovar/viki-releases/issues/new/choose) – a bug report or an
+idea. Issues are public: look inside the zip before attaching it.
 
 ## About this repository
 
